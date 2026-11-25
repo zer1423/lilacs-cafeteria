@@ -1,0 +1,435 @@
+/* ================= GLOBAL VARIABLES & BASE ================= */
+:root {
+    --lilac-bg: #814b8e;
+    --lilac-dark: #511c66;
+    --lilac-hover: #d8b4e2;
+    --text-dark: #2f1a38;
+    --white: #ffffff;
+    --font-script: 'Great Vibes', cursive;
+    --font-serif: 'Lora', Georgia, serif;
+    --cream-bg: #FFFADE;
+}
+
+body {
+    font-family: var(--font-serif);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* ================= SHARED HEADER / NAVBAR ================= */
+.nav-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.brand-script {
+    font-family: var(--font-script);
+    font-size: 2rem;
+    color: var(--lilac-dark);
+    line-height: 1;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--lilac-bg);
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: 700;
+    color: var(--lilac-dark);
+}
+
+.navbar-toggler {
+    border-color: var(--lilac-dark);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(129, 75, 142, 0.25);
+}
+
+/* ================= SHARED FOOTER ================= */
+.site-footer {
+    background-color: var(--lilac-dark);
+}
+
+.footer-logo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: var(--white);
+    padding: 6px;
+    object-fit: cover;
+}
+
+.footer-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.footer-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+.footer-contact-list i {
+    font-size: 1.1rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.footer-quick-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(70px, auto));
+    gap: 10px 24px;
+    justify-content: start;
+}
+
+.footer-quick-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.footer-quick-links a:hover {
+    color: var(--lilac-hover);
+    text-decoration: underline;
+}
+
+/* ================= HOME SECTION 1: HERO ================= */
+.hero-image-wrapper {
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* ================= HOME SECTION 2: INTRO BANNER ================= */
+.intro-section {
+    background-color: var(--lilac-bg);
+}
+
+.intro-image-wrapper {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.intro-img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+}
+
+.intro-title {
+    font-family: var(--font-script);
+    font-size: 3.75rem;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.intro-tagline {
+    font-size: 1.65rem;
+    font-weight: 600;
+}
+
+.intro-copy {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* ================= HOME SECTION 3: FEATURED DISH ================= */
+.dish-image-wrapper {
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+}
+
+.dish-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.dish-logo-badge {
+    position: absolute;
+    bottom: 20px;
+    right: 24px;
+    width: 120px;
+    height: 120px;
+    background-color: var(--white);
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.dish-logo-badge img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* ================= ABOUT PAGE ================= */
+.about-section {
+    background-color: var(--cream-bg);
+}
+
+.about-title {
+    color: var(--lilac-dark);
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.about-text {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    line-height: 1.65;
+}
+
+.about-image-wrapper {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.about-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ================= GALLERY PAGE ================= */
+.gallery-banner {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    background-color: #1f1424;
+}
+
+.gallery-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.gallery-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(20, 12, 24, 0.6);
+}
+
+.gallery-banner-title {
+    color: var(--cream-bg);
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.gallery-section {
+    background-color: var(--cream-bg);
+}
+
+.gallery-poster-card {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.gallery-poster-wrapper {
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
+}
+
+.gallery-poster-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-photo-wrapper {
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+}
+
+.gallery-storefront-wrapper {
+    max-width: 680px;
+}
+
+.gallery-storefront-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-dining-img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-caption {
+    color: var(--lilac-dark);
+    font-size: 1.45rem;
+    font-weight: 700;
+}
+
+/* ================= CONTACT PAGE ================= */
+.contact-banner {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    background-color: #1f1424;
+}
+
+.contact-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.contact-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(20, 12, 24, 0.6);
+}
+
+.contact-banner-title {
+    color: var(--cream-bg);
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.contact-section {
+    background-color: var(--cream-bg);
+}
+
+.contact-heading {
+    color: var(--lilac-dark);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.contact-info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+}
+
+.contact-info-list i {
+    color: var(--lilac-dark);
+    font-size: 1.55rem;
+    line-height: 1.2;
+    flex-shrink: 0;
+}
+
+.contact-form-card {
+    background-color: var(--white);
+    border: 2px solid var(--text-dark);
+    border-radius: 18px;
+    padding: 26px 30px;
+    max-width: 480px;
+    margin: 0 auto;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.contact-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.contact-input {
+    border: 1.5px solid #4a3a52;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.contact-input:focus {
+    border-color: var(--lilac-bg);
+    box-shadow: 0 0 0 0.2rem rgba(129, 75, 142, 0.22);
+}
+
+.contact-submit-btn {
+    background-color: var(--lilac-bg);
+    color: var(--white);
+    border: 1.5px solid var(--lilac-dark);
+    border-radius: 999px;
+    padding: 6px 46px;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.contact-submit-btn:hover,
+.contact-submit-btn:focus {
+    background-color: var(--lilac-dark);
+    color: var(--white);
+}
+
+.contact-map-wrapper {
+    width: 100%;
+    height: 460px;
+    line-height: 0;
+}
+
+.contact-map-iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
