@@ -1,0 +1,152 @@
+/* ================= TABLET & MOBILE OVERRIDES ================= */
+@media (max-width: 991.98px) {
+    .hero-image-wrapper,
+    .dish-image-wrapper {
+        height: 380px;
+    }
+
+    .intro-title {
+        font-size: 3rem;
+    }
+
+    .about-title {
+        font-size: 2.2rem;
+    }
+
+    .about-img {
+        height: 340px;
+    }
+
+    .gallery-banner {
+        height: 120px;
+    }
+
+    .gallery-banner-title {
+        font-size: 2.5rem;
+    }
+
+    .gallery-storefront-img {
+        height: 320px;
+    }
+
+    .gallery-dining-img {
+        height: 260px;
+    }
+
+    .contact-banner {
+        height: 120px;
+    }
+
+    .contact-banner-title {
+        font-size: 2.5rem;
+    }
+
+    .contact-heading {
+        font-size: 1.75rem;
+    }
+
+    .contact-map-wrapper {
+        height: 380px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .brand-script {
+        font-size: 1.65rem;
+    }
+
+    .nav-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-image-wrapper,
+    .dish-image-wrapper {
+        height: 280px;
+        }
+
+    .intro-img {
+        height: 260px;
+    }
+
+    .intro-title {
+        font-size: 2.6rem;
+    }
+
+    .intro-tagline {
+        font-size: 1.35rem;
+    }
+
+    .intro-copy {
+        font-size: 1.05rem;
+    }
+
+    .dish-logo-badge {
+        width: 80px;
+        height: 80px;
+        bottom: 12px;
+        right: 12px;
+    }
+
+    .footer-logo {
+        width: 115px;
+        height: 115px;
+    }
+
+    .about-title {
+        font-size: 1.85rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .about-img {
+        height: 260px;
+    }
+
+    .gallery-banner {
+        height: 100px;
+    }
+
+    .gallery-banner-title {
+        font-size: 2rem;
+    }
+
+    .gallery-poster-card {
+        max-width: 320px;
+    } 
+
+    .gallery-photo-wrapper {
+        border-radius: 18px;
+    }
+
+    .gallery-storefront-img,
+    .gallery-dining-img {
+        height: 240px;
+    }
+
+    .gallery-caption {
+        font-size: 1.25rem;
+    }
+
+    .contact-banner {
+        height: 100px;
+    }
+
+    .contact-banner-title {
+        font-size: 2rem;
+    }
+
+    .contact-heading {
+        font-size: 1.55rem;
+    }
+
+    .contact-form-card {
+        padding: 20px;
+    }
+
+    .contact-map-wrapper {
+        height: 300px;
+    }
+}
