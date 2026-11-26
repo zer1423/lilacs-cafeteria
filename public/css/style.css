@@ -433,3 +433,108 @@ main {
     border: 0;
     display: block;
 }
+
+/* ================= ORDER PAGE ================= */
+
+.order-header {
+    background-color: var(--lilac-bg);
+    color: var(--white);
+    padding: 45px 15px;
+}
+
+.order-header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.order-header p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.menu-section {
+    background-color: var(--cream-bg);
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+
+.menu-section h2 {
+    color: var(--lilac-dark);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.menu-section > p {
+    color: var(--text-dark);
+    margin-bottom: 25px;
+}
+
+.food-card {
+    height: 100%;
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    transition: transform 0.2s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.food-card .card-body {
+    text-align: center;
+    padding: 18px;
+}
+
+.food-card h5 {
+    color: var(--lilac-dark);
+    font-weight: 700;
+}
+
+.food-card p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.order-btn {
+    background-color: var(--lilac-bg);
+    color: var(--white);
+    border-radius: 25px;
+}
+
+.order-btn:hover {
+    background-color: var(--lilac-dark);
+    color: var(--white);
+}
+
+.view-order-btn {
+    background-color: var(--lilac-dark);
+    color: var(--white);
+    border-radius: 25px;
+    padding: 10px 35px;
+}
+
+.view-order-btn:hover {
+    background-color: var(--lilac-bg);
+    color: var(--white);
+}
+
+/* Search bar */
+.container > .form-control {
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.container > .form-control:focus {
+    border-color: var(--lilac-bg);
+    box-shadow: 0 0 0 0.2rem rgba(129, 75, 142, 0.20);
+}
+
