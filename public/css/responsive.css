@@ -146,29 +146,85 @@
         padding: 20px;
     }
 
-    /* ORDER PAGE RESPONSIVENESS */
+   /* ================= ORDER PAGE MOBILE ================= */
 
-@media (max-width: 991.98px) {
-    .food-card img {
-        height: 180px;
-    }
+.order-header {
+    padding: 15px 10px;
 }
 
-@media (max-width: 767.98px) {
-    .order-header h1 {
-        font-size: 2.2rem;
-    }
-
-    .menu-section h2 {
-        font-size: 1.7rem;
-    }
-
-    .food-card img {
-        height: 160px;
-    }
+.order-header h1 {
+    font-size: 2rem;
 }
 
-    .contact-map-wrapper {
-        height: 300px;
-    }
+.order-header p {
+    font-size: 0.9rem;
+}
+
+.menu-section {
+    padding-top: 18px;
+    padding-bottom: 10px;
+}
+
+.menu-section h2 {
+    font-size: 1.15rem;
+    margin-bottom: 5px;
+}
+
+.menu-section > p {
+    font-size: 0.75rem;
+    margin-bottom: 12px;
+}
+
+/* Two-column food layout */
+.food-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.food-card img {
+    width: 75px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.food-card .card-body {
+    padding: 5px 8px;
+    text-align: left;
+}
+
+.food-card h5 {
+    font-size: 0.8rem;
+    margin-bottom: 3px;
+}
+
+.food-card p {
+    font-size: 0.75rem;
+    margin-bottom: 3px;
+}
+
+.food-card .order-btn {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+    width: auto !important;
+}
+
+/* Reduce space between menu items */
+.menu-section .row {
+    --bs-gutter-x: 8px;
+    --bs-gutter-y: 5px;
+}
+
+.menu-section .col-md-3 {
+    width: 50%;
+    margin-bottom: 8px !important;
+}
+
+.view-order-btn {
+    font-size: 0.85rem;
+    padding: 8px 25px;
 }
