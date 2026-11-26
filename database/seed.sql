@@ -34,7 +34,7 @@ INSERT INTO category (category_id, name, display_name, has_takeout_fee) VALUES
   (6, 'rice_extras',        'Rice & Extras',      0);
 
 -- ---------------------------------------------------------------
--- menu_item (image_url is NULL until real photos are added to public/images/)
+-- menu_item (image_url is set by the UPDATE block at the end; items without a photo stay NULL)
 -- ---------------------------------------------------------------
 
 -- 1: Sizzling Specials (served with java rice and soup)
@@ -85,3 +85,26 @@ INSERT INTO menu_item (category_id, name, description, price) VALUES
   (6, 'Garlic Rice', NULL, 20.00),
   (6, 'Java Rice',   NULL, 25.00),
   (6, 'Egg',         NULL, 15.00);
+
+-- ---------------------------------------------------------------
+-- Dish photos (files live in public/images/order/). Items not listed
+-- here (drinks, pastries, rice & extras) have no photo and stay NULL.
+-- ---------------------------------------------------------------
+UPDATE menu_item SET image_url='/images/order/sizzling/siz_sisig.jpg'       WHERE name='Sizzling Sisig';
+UPDATE menu_item SET image_url='/images/order/sizzling/siz_chix.jpg'        WHERE name='Sizzling Chicken';
+UPDATE menu_item SET image_url='/images/order/sizzling/siz_liempo.jpg'      WHERE name='Sizzling Liempo';
+UPDATE menu_item SET image_url='/images/order/sizzling/siz_burgersteak.jpg' WHERE name='Sizzling Burger Steak';
+UPDATE menu_item SET image_url='/images/order/sizzling/siz_porkchop.jpg'    WHERE name='Sizzling Porkchop';
+
+UPDATE menu_item SET image_url='/images/order/silog/silog_toci.jpg'      WHERE name='Tocilog';
+UPDATE menu_item SET image_url='/images/order/silog/silog_chix.jpg'      WHERE name='Chicksilog';
+UPDATE menu_item SET image_url='/images/order/silog/silog_liempo.jpg'    WHERE name='Liemposilog';
+UPDATE menu_item SET image_url='/images/order/silog/silog_hungarian.jpg' WHERE name='Hungariansilog';
+UPDATE menu_item SET image_url='/images/order/silog/silog_tapsi.jpg'     WHERE name='Tapsilog';
+UPDATE menu_item SET image_url='/images/order/silog/silog_skin.jpg'      WHERE name='Skinsilog';
+UPDATE menu_item SET image_url='/images/order/silog/silog_bangus.jpg'    WHERE name='Bangsilog';
+
+UPDATE menu_item SET image_url='/images/order/student_meal/sm_porkchop2.jpg' WHERE name='Student Porkchop';
+UPDATE menu_item SET image_url='/images/order/student_meal/sm_skinless.jpg'  WHERE name='Student Skin Longanisa';
+UPDATE menu_item SET image_url='/images/order/student_meal/sm_hungarian.jpg' WHERE name='Student Hungarian';
+UPDATE menu_item SET image_url='/images/order/student_meal/sm_burgsteak.jpg' WHERE name='Student Burger Steak';
