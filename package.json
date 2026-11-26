@@ -1,0 +1,32 @@
+{
+  "name": "lilacs-cafeteria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zer1423/lilacs-cafeteria.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/zer1423/lilacs-cafeteria/issues"
+  },
+  "homepage": "https://github.com/zer1423/lilacs-cafeteria#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "express-session": "^1.19.0",
+    "mysql2": "^3.24.6"
+  },
+  "allowScripts": {
+    "bcrypt@6.0.0": true
+  }
+}
