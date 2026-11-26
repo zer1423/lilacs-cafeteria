@@ -146,6 +146,28 @@
         padding: 20px;
     }
 
+    /* ORDER PAGE RESPONSIVENESS */
+
+@media (max-width: 991.98px) {
+    .food-card img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .order-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .menu-section h2 {
+        font-size: 1.7rem;
+    }
+
+    .food-card img {
+        height: 160px;
+    }
+}
+
     .contact-map-wrapper {
         height: 300px;
     }
