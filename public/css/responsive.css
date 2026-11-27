@@ -224,6 +224,32 @@
     margin-bottom: 8px !important;
 }
 
+    /* ORDER2*/
+
+    @media (max-width: 767.98px) {
+    .order-summary-section {
+        padding: 30px 15px;
+    }
+
+    .order-summary-title {
+        font-size: 1.85rem;
+    }
+
+    .order-items {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .order-total {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .order-action-btn {
+        width: 100%;
+    }
+}
+
 .view-order-btn {
     font-size: 0.85rem;
     padding: 8px 25px;
