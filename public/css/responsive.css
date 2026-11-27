@@ -254,3 +254,39 @@
     font-size: 0.85rem;
     padding: 8px 25px;
 }
+
+    /* ORDER 3 */
+
+@media (max-width: 767.98px) {
+
+    .confirmation-section {
+        padding: 40px 15px;
+    }
+
+    .confirmation-container {
+        gap: 25px;
+    }
+
+    .confirmation-box {
+        min-height: 140px;
+        gap: 12px;
+        padding: 20px 12px;
+    }
+
+    .confirmation-box h1 {
+        font-size: 1.5rem;
+    }
+
+    .confirmation-box i {
+        font-size: 2rem;
+    }
+
+    .confirmation-details {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .confirmation-details p {
+        font-size: 0.9rem;
+    }
+}
