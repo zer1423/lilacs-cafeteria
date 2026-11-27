@@ -1,334 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Lilac's Cafeteria | Checkout</title>
+        <meta name="description" content="Complete your pickup order at Lilac's Cafeteria and pay via QR Ph.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
+        <header class="site-header sticky-top">
+            <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2">
+                <div class="container">
+                    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                        <img src="images/lilac_logo.jpg" alt="Lilac's Cafeteria Logo" class="nav-logo">
+                        <span class="brand-script">Lilac's Cafeteria</span>
+                    </a>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-    <title>Lilac's Cafeteria | Order</title>
+                    <div class="collapse navbar-collapse" id="mainNavbar">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3 text-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="menu.html">Order</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-    <!-- Google Fonts (fixes header script & body/footer serif fonts) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap & Bootstrap Icons (fixes footer contact icons) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-</head>
-
-<body>
-    <!-- ================= HEADER ================= -->
-    <header class="site-header sticky-top">
-        <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2">
+        <main class="checkout-section py-4 py-lg-5">
             <div class="container">
-                <!-- Brand Logo & Name -->
-                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                    <img src="images/Lilac_Logo.jpg" alt="Lilac Logo" class="nav-logo">
-                    <span class="brand-script">Lilac's Cafeteria</span>
-                </a>
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-4">
+                    <div>
+                        <a href="menu.html" class="text-decoration-none fw-semibold" style="color: var(--lilac-dark);">
+                            <i class="bi bi-arrow-left me-1"></i> Back to Menu
+                        </a>
+                        <h1 class="mt-2 mb-0 fw-bold" style="color: var(--lilac-dark);">Checkout</h1>
+                    </div>
+                </div>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <!-- Business Unavailable State -->
+                <div id="checkoutUnavailable" class="checkout-card text-center py-5 d-none">
+                    <i class="bi bi-shop-window fs-1 text-warning d-block mb-3"></i>
+                    <h2 class="h4 fw-bold" style="color: var(--lilac-dark);">Online Ordering Unavailable</h2>
+                    <p class="text-muted mb-3">Business information is currently not configured, so online pickup orders cannot be placed right now.</p>
+                    <a href="index.html" class="btn btn-outline-lilac px-4">Return Home</a>
+                </div>
 
-                <!-- Navigation Links -->
-                <div class="collapse navbar-collapse" id="mainNavbar">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3 text-center">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="order.html">Order</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="gallery.html">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
+                <!-- Empty Cart State -->
+                <div id="emptyCartState" class="checkout-card text-center py-5 d-none">
+                    <i class="bi bi-bag-x fs-1 text-muted d-block mb-3"></i>
+                    <h2 class="h4 fw-bold" style="color: var(--lilac-dark);">Your cart is empty</h2>
+                    <p class="text-muted mb-4">Add some delicious meals from our menu before checking out.</p>
+                    <a href="menu.html" class="btn btn-lilac px-4 py-2">Browse Menu</a>
+                </div>
+
+                <!-- Active Checkout Grid -->
+                <div id="checkoutGrid" class="row g-4 align-items-start d-none">
+                    <!-- Left: Your Details + Pickup Time + QR Ph (Wireframe Page 6) -->
+                    <div class="col-12 col-lg-7">
+                        <div class="checkout-card">
+                            <h2 class="checkout-card-title">Your Details</h2>
+
+                            <form id="checkoutForm" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-12 col-sm-6">
+                                        <label for="firstName" class="form-label fw-semibold">First Name</label>
+                                        <input type="text" class="form-control checkout-input" id="firstName" placeholder="Juan" maxlength="50" required>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="lastName" class="form-label fw-semibold">Last Name</label>
+                                        <input type="text" class="form-control checkout-input" id="lastName" placeholder="Dela Cruz" maxlength="50" required>
+                                    </div>
+                                </div>
+
+                                <div class="mt-3">
+                                    <label for="email" class="form-label fw-semibold">Email <span class="text-muted fw-normal">(Optional)</span></label>
+                                    <input type="email" class="form-control checkout-input" id="email" placeholder="example@email.com" maxlength="100">
+                                </div>
+
+                                <div class="mt-3">
+                                    <label for="phone" class="form-label fw-semibold">Mobile Number</label>
+                                    <input type="tel" class="form-control checkout-input" id="phone" placeholder="09XXXXXXXXX" maxlength="20" required>
+                                </div>
+
+                                <div class="mt-3">
+                                    <label for="notes" class="form-label fw-semibold">Additional Notes <span class="text-muted fw-normal">(Optional)</span></label>
+                                    <textarea class="form-control checkout-input" id="notes" rows="2" maxlength="255" placeholder="Allergies, utensil requests, or pickup instructions"></textarea>
+                                </div>
+
+                                <!-- Pickup Time Row -->
+                                <div class="pickup-box">
+                                    <div>
+                                        <div class="fw-bold fs-5">Pickup Time</div>
+                                        <div id="pickupDisplayText" class="text-muted">Loading available slots...</div>
+                                    </div>
+                                    <button type="button" id="editPickupBtn" class="btn btn-outline-lilac btn-sm px-3" data-bs-toggle="modal" data-bs-target="#pickupTimeModal">
+                                        <i class="bi bi-pencil me-1"></i> Edit
+                                    </button>
+                                </div>
+
+                                <!-- Payment Method: QR Ph -->
+                                <div class="qrph-box mb-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h3 class="h5 fw-bold mb-0" style="color: var(--lilac-dark);">Payment Method: QR Ph</h3>
+                                        <span class="badge bg-secondary">Online Pickup Only</span>
+                                    </div>
+                                    <p class="small text-muted mb-3">
+                                        Scan the QR Ph code using any bank or e-wallet app, pay the exact total shown, and enter your receipt Reference No. below.
+                                    </p>
+
+                                    <div class="row g-3 align-items-center">
+                                        <div class="col-12 col-sm-auto text-center">
+                                            <img src="images/payment-qr.png" alt="QR Ph Payment Code" class="qrph-img">
+                                        </div>
+                                        <div class="col-12 col-sm">
+                                            <div class="text-muted small text-uppercase fw-semibold">Amount to Pay</div>
+                                            <div id="qrPayAmount" class="qrph-total-amount mb-3">₱0.00</div>
+
+                                            <label for="paymentReference" class="form-label fw-semibold">Reference No.</label>
+                                            <input
+                                                type="text"
+                                                class="form-control checkout-input"
+                                                id="paymentReference"
+                                                placeholder="6–30 letters or digits (e.g. 1029384756)"
+                                                maxlength="30"
+                                                required
+                                            >
+                                            <div class="form-text">An admin will verify this reference against incoming QR Ph payments.</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="checkoutError" class="alert alert-danger d-none" role="alert"></div>
+
+                                <button type="submit" id="confirmCheckoutBtn" class="btn btn-lilac w-100 py-2 fs-5">
+                                    Confirm Checkout
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Right: Order Review Summary -->
+                    <div class="col-12 col-lg-5">
+                        <div class="cart-panel-card">
+                            <h2 class="cart-panel-title">Order Summary</h2>
+                            <div id="checkoutItemsList" class="cart-items-list"></div>
+
+                            <div class="cart-summary-box">
+                                <div class="cart-summary-row">
+                                    <span>Subtotal</span>
+                                    <span id="checkoutSubtotal">₱0.00</span>
+                                </div>
+                                <div class="cart-summary-row">
+                                    <span>Takeout Fee <small class="text-muted" id="checkoutRateNote">(₱10/meal)</small></span>
+                                    <span id="checkoutTakeoutFee">₱0.00</span>
+                                </div>
+                                <div class="cart-summary-total">
+                                    <span>Total</span>
+                                    <span id="checkoutTotal">₱0.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
+        </main>
 
-    <!-- ================= MAIN CONTENT ================= -->
-    <main>
-        <div class="order-header text-center">
-            <h1>Our Menu</h1>
-            <p>Choose your favorite meals!</p>
-        </div>
-
-        <!-- SEARCH BAR -->
-        <div class="container mb-4">
-            <input type="text" class="form-control" placeholder="Search food...">
-        </div>
-
-        <!-- SIZZLING SPECIALS -->
-        <div class="container menu-section">
-            <h2>Sizzling Specials</h2>
-            <p>Served with Java Rice and Soup</p>
-
-            <div class="row">
-                <div class="col-md-3 mb-4">
-                    <div class="card food-card">
-                        <img src="images/order/sizzling/SIZ_Sisig.JPG" class="card-img-top" alt="Sizzling Sisig">
-                        <div class="card-body">
-                            <h5>Sizzling Sisig</h5>
-                            <p>₱129.00</p>
-                            <button class="btn order-btn w-100">Add to Order</button>
-                        </div>
+        <!-- Choose Time Modal (Wireframe Page 7) -->
+        <div class="modal fade" id="pickupTimeModal" tabindex="-1" aria-labelledby="pickupTimeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content" style="background-color: #f3f1f4; border-radius: 18px; border: 1.5px solid #2f1a38;">
+                    <div class="modal-header border-0 pb-1">
+                        <h2 class="modal-title fs-4 fw-bold" id="pickupTimeModalLabel">Choose Time</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <div class="card food-card">
-                        <img src="images/order/sizzling/SIZ_Chix.JPG" class="card-img-top" alt="Sizzling Chicken">
-                        <div class="card-body">
-                            <h5>Sizzling Chicken</h5>
-                            <p>₱129.00</p>
-                            <button class="btn order-btn w-100">Add to Order</button>
-                        </div>
+                    <div class="modal-body pt-2">
+                        <p id="pickupDayLabel" class="small text-muted mb-3"></p>
+                        <div id="timeSlotList"></div>
                     </div>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <div class="card food-card">
-                        <img src="images/order/sizzling/SIZ_Liempo.JPG" class="card-img-top" alt="Sizzling Liempo">
-                        <div class="card-body">
-                            <h5>Sizzling Liempo</h5>
-                            <p>₱129.00</p>
-                            <button class="btn order-btn w-100">Add to Order</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <div class="card food-card">
-                        <img src="images/order/sizzling/SIZ_BurgerSteak.jpg" class="card-img-top" alt="Sizzling Burger Steak">
-                        <div class="card-body">
-                            <h5>Sizzling Burger Steak</h5>
-                            <p>₱129.00</p>
-                            <button class="btn order-btn w-100">Add to Order</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <div class="card food-card">
-                        <img src="images/order/sizzling/SIZ_Porkchop.jpg" class="card-img-top" alt="Sizzling Porkchop">
-                        <div class="card-body">
-                            <h5>Sizzling Porkchop</h5>
-                            <p>₱139.00</p>
-                            <button class="btn order-btn w-100">Add to Order</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- TAPSILOG FAVORITES -->
-        <div class="container menu-section">
-            <h2>Tapsilog Favorites</h2>
-            <p>Served with Garlic Rice and Soup</p>
-
-            <div class="row">
-                <div class="col-md-3 mb-4">
-                    <div class="card food-card">
-                        <img src="images/order/silog/SILOG_Toci.JPG" class="card-img-top" alt="Tocilog">
-                        <div class="card-body">
-                            <h5>Tocilog</h5>
-                            <p>₱129.00</p>
-                            <button class="btn order-btn w-100">Add to Order</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <div class="card food-card">
-                        <img src="images/order/silog/SILOG_Tapsi.JPG" class="card-img-top" alt="Tapsilog">
-                        <div class="card-body">
-                            <h5>Tapsilog</h5>
-                            <p>₱129.00</p>
-                            <button class="btn order-btn w-100">Add to Order</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <div class="card food-card">
-                        <img src="images/order/silog/SILOG_Chix.JPG" class="card-img-top" alt="Chicksilog">
-                        <div class="card-body">
-                            <h5>Chicksilog</h5>
-                            <p>₱119.00</p>
-                            <button class="btn order-btn w-100">Add to Order</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <div class="card food-card">
-                        <img src="images/order/silog/SILOG_Skin.JPG" class="card-img-top" alt="Skinsilog">
-                        <div class="card-body">
-                            <h5>Skinsilog</h5>
-                            <p>₱129.00</p>
-                            <button class="btn order-btn w-100">Add to Order</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <div class="card food-card">
-                        <img src="images/order/silog/SILOG_Liempo.JPG" class="card-img-top" alt="Liemposilog">
-                        <div class="card-body">
-                            <h5>Liemposilog</h5>
-                            <p>₱119.00</p>
-                            <button class="btn order-btn w-100">Add to Order</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <div class="card food-card">
-                        <img src="images/order/silog/SILOG_Bangus.JPG" class="card-img-top" alt="Bangsilog">
-                        <div class="card-body">
-                            <h5>Bangsilog</h5>
-                            <p>₱149.00</p>
-                            <button class="btn order-btn w-100">Add to Order</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <div class="card food-card">
-                        <img src="images/order/silog/SILOG_Hungarian.JPG" class="card-img-top" alt="Hungariansilog">
-                        <div class="card-body">
-                            <h5>Hungariansilog</h5>
-                            <p>₱119.00</p>
-                            <button class="btn order-btn w-100">Add to Order</button>
-                        </div>
+                    <div class="modal-footer border-0 pt-1">
+                        <button type="button" id="confirmPickupTimeBtn" class="btn btn-lilac w-100 py-2 fs-5">
+                            Confirm Pickup Time
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- STUDENT MEALS -->
-        <div class="container menu-section">
-            <h2>Student Meals</h2>
-
-            <div class="row">
-                <div class="col-md-3 mb-4">
-                    <div class="card food-card">
-                        <img src="images/order/student_meal/SM_Porkchop2.JPG" class="card-img-top" alt="Porkchop">
-                        <div class="card-body">
-                            <h5>Porkchop</h5>
-                            <p>₱99.00</p>
-                            <button class="btn order-btn w-100">Add to Order</button>
+        <footer class="site-footer py-5">
+            <div class="container">
+                <div class="row align-items-center gy-4">
+                    <div class="col-12 col-md-3 text-center text-md-start">
+                        <div class="footer-logo-wrapper">
+                            <img src="images/lilac_logo.jpg" alt="Lilac's Cafeteria Logo" class="footer-logo">
                         </div>
                     </div>
-                </div>
 
-                <div class="col-md-3 mb-4">
-                    <div class="card food-card">
-                        <img src="images/order/student_meal/SM_Skinless.JPG" class="card-img-top" alt="Skinless Longanisa">
-                        <div class="card-body">
-                            <h5>Skinless Longanisa</h5>
-                            <p>₱99.00</p>
-                            <button class="btn order-btn w-100">Add to Order</button>
+                    <div class="col-12 col-md-5 text-white">
+                        <h5 class="footer-heading mb-3">Contacts</h5>
+                        <div data-biz-details>
+                            <ul class="list-unstyled footer-contact-list mb-0">
+                                <li>
+                                    <i class="bi bi-telephone-fill"></i>
+                                    <span data-biz-phone>0917 592 0609</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-clock-fill"></i>
+                                    <span>Mon 8:30 AM – 8:30 PM | Tue–Fri 7:00 AM – 9:30 PM | Sat–Sun 8:00 AM – 9:30 PM</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span data-biz-address>35 A Lower Kalaklan, Zambales (In Front of Celtech College), 2200, Olongapo</span>
+                                </li>
+                            </ul>
                         </div>
+                        <p class="small mb-0 d-none" data-biz-unavailable>Business contact details are currently unavailable.</p>
                     </div>
-                </div>
 
-                <div class="col-md-3 mb-4">
-                    <div class="card food-card">
-                        <img src="images/order/student_meal/SM_Hungarian.JPG" class="card-img-top" alt="Hungarian">
-                        <div class="card-body">
-                            <h5>Hungarian</h5>
-                            <p>₱99.00</p>
-                            <button class="btn order-btn w-100">Add to Order</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <div class="card food-card">
-                        <img src="images/order/student_meal/SM_BurgSteak.JPG" class="card-img-top" alt="Burger Steak">
-                        <div class="card-body">
-                            <h5>Burger Steak</h5>
-                            <p>₱99.00</p>
-                            <button class="btn order-btn w-100">Add to Order</button>
+                    <div class="col-12 col-md-4 text-white">
+                        <h5 class="footer-heading mb-3">Quick Links</h5>
+                        <div class="footer-quick-links">
+                            <a href="index.html">Home</a>
+                            <a href="menu.html">Order</a>
+                            <a href="contact.html">Contact</a>
+                            <a href="about.html">About</a>
+                            <a href="gallery.html">Gallery</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
 
-        <!-- VIEW ORDER -->
-        <div class="container text-center my-5">
-            <a href="order2.html" class="btn view-order-btn">
-                View My Order
-            </a>
-        </div>
-    </main>
-
-    <!-- ================= FOOTER ================= -->
-    <footer class="site-footer py-5">
-        <div class="container">
-            <div class="row align-items-center gy-4">
-
-                <!-- Footer Logo -->
-                <div class="col-12 col-md-3 text-center text-md-start">
-                    <div class="footer-logo-wrapper">
-                        <img src="images/Lilac_Logo.jpg" alt="Lilac's Cafeteria Logo" class="footer-logo">
-                    </div>
-                </div>
-
-                <!-- Contacts -->
-                <div class="col-12 col-md-5 text-white">
-                    <h5 class="footer-heading mb-3">Contacts</h5>
-                    <ul class="list-unstyled footer-contact-list mb-0">
-                        <li>
-                            <i class="bi bi-telephone-fill"></i>
-                            <span>0917 592 0609</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-clock-fill"></i>
-                            <span>10:00 AM - 8:00 PM</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span>35 A National Highway, Lower Kalaklan, Olongapo City, 2200 Zambales</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="col-12 col-md-4 text-white">
-                    <h5 class="footer-heading mb-3">Quick Links</h5>
-                    <div class="footer-quick-links">
-                        <a href="index.html">Home</a>
-                        <a href="order.html">Order</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="about.html">About</a>
-                        <a href="gallery.html">Gallery</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS & Shared Navigation Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/nav.js"></script>
-</body>
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/cart.js"></script>
+        <script src="js/order.js"></script>
+    </body>
 </html>
