@@ -146,147 +146,240 @@
         padding: 20px;
     }
 
-   /* ================= ORDER PAGE MOBILE ================= */
+/* =========================================
+   ORDER 1 - MENU PAGE (order.html)
+========================================= */
 
-.order-header {
-    padding: 15px 10px;
-}
+@media (max-width: 767.98px) {
 
-.order-header h1 {
-    font-size: 2rem;
-}
-
-.order-header p {
-    font-size: 0.9rem;
-}
-
-.menu-section {
-    padding-top: 18px;
-    padding-bottom: 10px;
-}
-
-.menu-section h2 {
-    font-size: 1.15rem;
-    margin-bottom: 5px;
-}
-
-.menu-section > p {
-    font-size: 0.75rem;
-    margin-bottom: 12px;
-}
-
-/* Two-column food layout */
-.food-card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 8px;
-    box-shadow: none;
-    background-color: transparent;
-}
-
-.food-card img {
-    width: 75px;
-    height: 65px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.food-card .card-body {
-    padding: 5px 8px;
-    text-align: left;
-}
-
-.food-card h5 {
-    font-size: 0.8rem;
-    margin-bottom: 3px;
-}
-
-.food-card p {
-    font-size: 0.75rem;
-    margin-bottom: 3px;
-}
-
-.food-card .order-btn {
-    font-size: 0.65rem;
-    padding: 3px 8px;
-    width: auto !important;
-}
-
-/* Reduce space between menu items */
-.menu-section .row {
-    --bs-gutter-x: 8px;
-    --bs-gutter-y: 5px;
-}
-
-.menu-section .col-md-3 {
-    width: 50%;
-    margin-bottom: 8px !important;
-}
-
-    /* ORDER2*/
-
-    @media (max-width: 767.98px) {
-    .order-summary-section {
-        padding: 30px 15px;
+    /* Main menu area */
+    .order-page {
+        padding: 20px 12px;
     }
 
-    .order-summary-title {
-        font-size: 1.85rem;
+    /* Category buttons */
+    .menu-category-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: nowrap;
+        margin-bottom: 20px;
     }
 
-    .order-items {
-        padding: 15px;
+    .menu-category-buttons button {
+        flex: 1;
+        padding: 7px 5px;
+        font-size: 0.8rem;
+    }
+
+    /* Food cards */
+    .menu-items-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .menu-item-card {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .menu-item-image {
+        width: 85px;
+        height: 85px;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    .menu-item-info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .menu-item-info h5 {
+        font-size: 0.95rem;
+        margin-bottom: 3px;
+    }
+
+    .menu-item-info p {
+        font-size: 0.8rem;
+        margin-bottom: 3px;
+    }
+
+    .menu-item-price {
+        font-size: 0.9rem;
+    }
+
+    .menu-item-actions button {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+        white-space: nowrap;
+    }
+
+    .sold-out {
+        font-size: 0.7rem;
+        padding: 5px 8px;
+    }
+
+    /* View Order button */
+    .view-order-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+    }
+}
+
+
+/* =========================================
+   ORDER 2 - CHECKOUT PAGE (order2.htm)
+========================================= */
+
+@media (max-width: 767.98px) {
+
+    .checkout-section {
+        padding: 20px 12px;
+    }
+
+    .checkout-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .checkout-heading {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+
+    .checkout-form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
         width: 100%;
     }
 
-    .order-total {
-        max-width: 100%;
+    .checkout-field {
         width: 100%;
     }
 
-    .order-action-btn {
+    .checkout-field label {
+        display: block;
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+    }
+
+    .checkout-field input,
+    .checkout-field select,
+    .checkout-field textarea {
         width: 100%;
+        font-size: 0.9rem;
+        padding: 9px;
+    }
+
+    .checkout-field textarea {
+        min-height: 65px;
+        resize: vertical;
+    }
+
+    /* Payment method */
+    .payment-method {
+        width: 100%;
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+
+    /* Order summary */
+    .checkout-order-summary {
+        width: 100%;
+        margin-top: 20px;
+        padding: 12px;
+    }
+
+    .checkout-order-summary h4 {
+        font-size: 1.1rem;
+    }
+
+    .checkout-order-items {
+        font-size: 0.85rem;
+    }
+
+    .checkout-total {
+        font-size: 0.9rem;
+    }
+
+    /* Place Order button */
+    .place-order-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.95rem;
     }
 }
 
-.view-order-btn {
-    font-size: 0.85rem;
-    padding: 8px 25px;
-}
 
-    /* ORDER 3 */
+/* =========================================
+   ORDER 3 - CONFIRMATION PAGE (order3.html)
+========================================= */
 
 @media (max-width: 767.98px) {
 
     .confirmation-section {
-        padding: 40px 15px;
+        min-height: 60vh;
+        padding: 35px 15px;
     }
 
     .confirmation-container {
+        width: 100%;
+        max-width: 100%;
         gap: 25px;
     }
 
+    /* Order confirmed box */
     .confirmation-box {
-        min-height: 140px;
+        width: 100%;
+        min-height: 130px;
+        padding: 15px;
         gap: 12px;
-        padding: 20px 12px;
     }
 
     .confirmation-box h1 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .confirmation-box i {
         font-size: 2rem;
     }
 
+    /* Order details box */
     .confirmation-details {
         width: 100%;
+        max-width: 100%;
         padding: 12px;
     }
 
     .confirmation-details p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    /* Additional details and order summary */
+    .confirmation-order-details {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .confirmation-order-details p {
+        font-size: 0.85rem;
+    }
+
+    .return-menu-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
     }
 }
+
