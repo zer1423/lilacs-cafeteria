@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Lilac's Cafeteria | Order Confirmed</title>
+        <meta name="description" content="Your pickup order at Lilac's Cafeteria has been received.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
+        <header class="site-header sticky-top">
+            <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2">
+                <div class="container">
+                    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                        <img src="images/lilac_logo.jpg" alt="Lilac's Cafeteria Logo" class="nav-logo">
+                        <span class="brand-script">Lilac's Cafeteria</span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNavbar">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3 text-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="menu.html">Order</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="confirm-section d-flex flex-column">
+            <div class="confirm-banner">
+                <h1 class="confirm-banner-title">Order Confirmed!</h1>
+            </div>
+
+            <div class="container py-5 flex-grow-1">
+                <div id="confirmMissing" class="confirm-receipt-card text-center p-5 d-none">
+                    <i class="bi bi-receipt fs-1 text-muted d-block mb-3"></i>
+                    <h2 class="h4 fw-bold" style="color: var(--lilac-dark);">No recent order found</h2>
+                    <p class="text-muted mb-4">For privacy, order details are shown immediately after checkout.</p>
+                    <a href="menu.html" class="btn btn-lilac px-4 py-2">Order Now</a>
+                </div>
+
+                <div id="confirmContent" class="d-none">
+                    <div class="mx-auto mb-4" style="max-width: 540px;">
+                        <div class="row align-items-center mb-2">
+                            <div class="col-6 fs-4 fw-bold">Order Number</div>
+                            <div class="col-6 text-end confirm-order-number" id="confirmOrderNumber">#0</div>
+                        </div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-6 fs-5 fw-bold">Order Status</div>
+                            <div class="col-6 text-end confirm-meta-value" id="confirmStatus">Pending</div>
+                        </div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-6 fs-5 fw-bold">Pickup Time</div>
+                            <div class="col-6 text-end confirm-meta-value" id="confirmPickupTime">-</div>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-6 fs-6 fw-bold">Payment Ref.</div>
+                            <div class="col-6 text-end fw-semibold" style="color: var(--lilac-dark);" id="confirmPaymentRef">-</div>
+                        </div>
+                    </div>
+
+                    <div class="confirm-receipt-card">
+                        <div class="confirm-receipt-body" id="confirmItemsBody"></div>
+                        <div class="confirm-receipt-total">
+                            <span>Total</span>
+                            <span id="confirmTotal">₱0.00</span>
+                        </div>
+                    </div>
+
+                    <p class="text-center text-muted small mt-3 mb-4">
+                        Your payment reference has been recorded. Our staff will verify your QR Ph transfer and start preparing your order.
+                    </p>
+
+                    <div class="text-center d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="menu.html" class="btn btn-lilac px-4 py-2">Order Again</a>
+                        <a href="index.html" class="btn btn-outline-lilac px-4 py-2">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer py-5">
+            <div class="container">
+                <div class="row align-items-center gy-4">
+                    <div class="col-12 col-md-3 text-center text-md-start">
+                        <div class="footer-logo-wrapper">
+                            <img src="images/lilac_logo.jpg" alt="Lilac's Cafeteria Logo" class="footer-logo">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-5 text-white">
+                        <h5 class="footer-heading mb-3">Contacts</h5>
+                        <div data-biz-details>
+                            <ul class="list-unstyled footer-contact-list mb-0">
+                                <li>
+                                    <i class="bi bi-telephone-fill"></i>
+                                    <span data-biz-phone>0917 592 0609</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-clock-fill"></i>
+                                    <span>Mon 8:30 AM – 8:30 PM | Tue–Fri 7:00 AM – 9:30 PM | Sat–Sun 8:00 AM – 9:30 PM</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span data-biz-address>35 A Lower Kalaklan, Zambales (In Front of Celtech College), 2200, Olongapo</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="small mb-0 d-none" data-biz-unavailable>Business contact details are currently unavailable.</p>
+                    </div>
+
+                    <div class="col-12 col-md-4 text-white">
+                        <h5 class="footer-heading mb-3">Quick Links</h5>
+                        <div class="footer-quick-links">
+                            <a href="index.html">Home</a>
+                            <a href="menu.html">Order</a>
+                            <a href="contact.html">Contact</a>
+                            <a href="about.html">About</a>
+                            <a href="gallery.html">Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/nav.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const raw = sessionStorage.getItem('lilacs_last_order');
+                const missingEl = document.getElementById('confirmMissing');
+                const contentEl = document.getElementById('confirmContent');
+
+                if (!raw) {
+                    missingEl.classList.remove('d-none');
+                    return;
+                }
+
+                let order;
+                try {
+                    order = JSON.parse(raw);
+                } catch {
+                    missingEl.classList.remove('d-none');
+                    return;
+                }
+
+                if (!order || !order.order_id) {
+                    missingEl.classList.remove('d-none');
+                    return;
+                }
+
+                contentEl.classList.remove('d-none');
+                document.getElementById('confirmOrderNumber').textContent = `#${order.order_id}`;
+
+                const statusMap = {
+                    pending: 'Pending',
+                    preparing: 'Preparing',
+                    ready_for_pickup: 'Ready for Pickup',
+                    picked_up: 'Picked Up',
+                    cancelled: 'Cancelled'
+                };
+                document.getElementById('confirmStatus').textContent = statusMap[order.status] || order.status;
+                document.getElementById('confirmPaymentRef').textContent = order.payment_reference || '-';
+
+                const pickupDt = new Date(String(order.time_of_pickup).replace(' ', 'T'));
+                if (!Number.isNaN(pickupDt.getTime())) {
+                    const endDt = new Date(pickupDt.getTime() + 10 * 60 * 1000);
+                    const fmt = (d) => d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+                    document.getElementById('confirmPickupTime').textContent = `${fmt(pickupDt)} – ${fmt(endDt)}`;
+                } else {
+                    document.getElementById('confirmPickupTime').textContent = order.time_of_pickup;
+                }
+
+                const itemsBody = document.getElementById('confirmItemsBody');
+                const escapeHtml = (s) => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+                let rowsHtml = (order.items || []).map((item) => {
+                    const line = Number(item.unit_price) * Number(item.quantity);
+                    return `
+                        <div class="d-flex justify-content-between py-1 fs-5">
+                            <span>${item.quantity}x ${escapeHtml(item.name)}</span>
+                            <span class="fw-semibold">${line.toFixed(2)}</span>
+                        </div>
+                    `;
+                }).join('');
+
+                rowsHtml += `
+                    <div class="d-flex justify-content-between py-1 fs-5 border-top mt-2 pt-2">
+                        <span>Takeout Fee</span>
+                        <span class="fw-semibold">${Number(order.takeout_fee).toFixed(2)}</span>
+                    </div>
+                `;
+                itemsBody.innerHTML = rowsHtml;
+                document.getElementById('confirmTotal').textContent = `₱${Number(order.total).toFixed(2)}`;
+            });
+        </script>
+    </body>
+</html>

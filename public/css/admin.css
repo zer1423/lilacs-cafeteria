@@ -1,0 +1,419 @@
+:root {
+    --lilac-bg: #814b8e;
+    --lilac-dark: #511c66;
+    --text-dark: #2f1a38;
+    --cream-bg: #FFFADE;
+    --white: #ffffff;
+    --font-serif: 'Lora', Georgia, serif;
+}
+
+body.admin-body {
+    font-family: var(--font-serif);
+    color: var(--text-dark);
+    background-color: var(--cream-bg);
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* ================= ADMIN LOGIN (WIREFRAME PAGE 9) ================= */
+.admin-login-bg {
+    min-height: 100vh;
+    background: linear-gradient(rgba(20, 12, 24, 0.45), rgba(20, 12, 24, 0.55)),
+        url('/images/home/lilac_storefront.jpg') center / cover no-repeat fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    position: relative;
+}
+
+.admin-login-corner-logo {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background-color: var(--white);
+    padding: 4px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.admin-login-corner-logo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.admin-login-card {
+    background-color: #e6e4e7;
+    border: 1.5px solid var(--text-dark);
+    border-radius: 20px;
+    padding: 40px 44px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.admin-input-icon-wrap {
+    position: relative;
+}
+
+.admin-input-icon-wrap i {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+    pointer-events: none;
+}
+
+.admin-rounded-input {
+    border: 1.5px solid var(--text-dark);
+    border-radius: 10px;
+    padding: 10px 40px 10px 14px;
+    background-color: var(--white);
+}
+
+.admin-rounded-input:focus {
+    border-color: var(--lilac-dark);
+    box-shadow: 0 0 0 0.2rem rgba(81, 28, 102, 0.2);
+}
+
+/* ================= ADMIN SHELL & SIDEBAR (WIREFRAME PAGES 10-13) ================= */
+.admin-shell {
+    display: flex;
+    min-height: 100vh;
+}
+
+.admin-sidebar {
+    width: 220px;
+    flex-shrink: 0;
+    background-color: var(--white);
+    border-right: 1.5px solid #d7cfdc;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 16px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.admin-sidebar-logo-wrap {
+    text-align: center;
+    padding-bottom: 16px;
+    border-bottom: 1.5px solid var(--lilac-dark);
+    margin-bottom: 20px;
+}
+
+.admin-sidebar-logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e6dcef;
+}
+
+.admin-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.admin-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #4f4654;
+    font-size: 1.15rem;
+    font-weight: 700;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.admin-nav-link:hover {
+    background-color: #f4ecf8;
+    color: var(--lilac-dark);
+}
+
+.admin-nav-link.active {
+    color: var(--lilac-dark);
+    background-color: #efe4f5;
+}
+
+.admin-logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    background: transparent;
+    color: #c81e1e;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.admin-logout-btn:hover {
+    background-color: #fde8e8;
+}
+
+.admin-main {
+    flex: 1;
+    padding: 28px 32px;
+    min-width: 0;
+}
+
+.admin-page-title {
+    color: var(--lilac-dark);
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.admin-search-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+}
+
+.admin-search-wrap i {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4f4654;
+    pointer-events: none;
+}
+
+.admin-search-input {
+    border: 1.5px solid var(--text-dark);
+    border-radius: 999px;
+    padding: 7px 38px 7px 16px;
+    background-color: #ebe9ec;
+    color: var(--text-dark);
+}
+
+.admin-search-input:focus {
+    background-color: var(--white);
+    border-color: var(--lilac-dark);
+    box-shadow: 0 0 0 0.2rem rgba(81, 28, 102, 0.18);
+}
+
+.admin-filter-pill {
+    background-color: #e4e2e6;
+    color: #3f3844;
+    border: 1.5px solid #594f5f;
+    border-radius: 999px;
+    padding: 4px 16px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.admin-filter-pill.active {
+    background-color: var(--lilac-dark);
+    color: var(--white);
+    border-color: var(--lilac-dark);
+}
+
+/* ================= ADMIN ORDER CARDS (WIREFRAME PAGE 10) ================= */
+.admin-order-card {
+    background-color: var(--white);
+    border: 1.5px solid #6c5f74;
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.admin-order-card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #d5cddb;
+    background-color: #faf7fc;
+}
+
+.admin-order-card-body {
+    padding: 14px 16px;
+    flex: 1;
+}
+
+.admin-order-card-foot {
+    padding: 10px 16px 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-pending { background-color: #fff3cd; color: #7a5800; }
+.status-preparing { background-color: #cfe2ff; color: #084298; }
+.status-ready_for_pickup { background-color: #d1e7dd; color: #0f5132; }
+.status-picked_up { background-color: #e2e3e5; color: #41464b; }
+.status-cancelled { background-color: #f8d7da; color: #842029; }
+
+/* ================= ADMIN MENU ROWS (WIREFRAME PAGE 11) ================= */
+.admin-menu-row {
+    background-color: #ebe9ec;
+    border: 1.5px solid var(--text-dark);
+    border-radius: 14px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.admin-menu-row-thumb {
+    width: 72px;
+    height: 54px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+}
+
+.admin-menu-row-thumb.is-fallback {
+    object-fit: contain;
+    background-color: var(--white);
+    padding: 4px;
+}
+
+.admin-icon-action {
+    border: none;
+    background: transparent;
+    color: var(--text-dark);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+.admin-icon-action:hover {
+    background-color: rgba(81, 28, 102, 0.1);
+}
+
+.admin-icon-action.text-danger:hover {
+    background-color: rgba(200, 30, 30, 0.1);
+}
+
+/* ================= ADMIN ACCOUNTS TABLE (WIREFRAME PAGE 13) ================= */
+.admin-table-card {
+    background-color: var(--white);
+    border: 1.5px solid var(--text-dark);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+/* ================= DELETE CONFIRMATION MODAL (WIREFRAME PAGES 15 & 17) ================= */
+.delete-alert-icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background-color: #9e1c24;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0 auto 18px;
+}
+
+.btn-admin-lilac {
+    background-color: var(--lilac-bg);
+    color: var(--white);
+    border: 1.5px solid var(--lilac-dark);
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.btn-admin-lilac:hover,
+.btn-admin-lilac:focus {
+    background-color: var(--lilac-dark);
+    color: var(--white);
+}
+
+/* Responsive Admin Shell */
+@media (max-width: 991.98px) {
+    .admin-shell {
+        flex-direction: column;
+    }
+
+    .admin-sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        border-right: none;
+        border-bottom: 1.5px solid #d7cfdc;
+        padding: 12px 16px;
+    }
+
+    .admin-sidebar-logo-wrap {
+        display: none;
+    }
+
+    .admin-nav-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .admin-nav-link {
+        font-size: 0.95rem;
+        padding: 6px 12px;
+    }
+
+    .admin-logout-btn {
+        width: auto;
+        font-size: 0.95rem;
+        padding: 6px 12px;
+        margin: 4px auto 0;
+    }
+
+    .admin-main {
+        padding: 20px 16px;
+    }
+
+    .admin-login-corner-logo {
+        width: 68px;
+        height: 68px;
+    }
+
+    .admin-login-card {
+        padding: 28px 22px;
+    }
+
+    .admin-menu-row {
+        flex-wrap: wrap;
+    }
+}

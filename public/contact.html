@@ -19,7 +19,7 @@
             <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2">
                 <div class="container">
                     <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                        <img src="images/Lilac_Logo.jpg" alt="Lilac Logo" class="nav-logo">
+                        <img src="images/lilac_logo.jpg" alt="Lilac's Cafeteria Logo" class="nav-logo">
                         <span class="brand-script">Lilac's Cafeteria</span>
                     </a>
 
@@ -36,7 +36,7 @@
                                 <a class="nav-link" href="about.html">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="order.html">Order</a>
+                                <a class="nav-link" href="menu.html">Order</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="gallery.html">Gallery</a>
@@ -51,39 +51,47 @@
         </header>
 
         <main>
-            <!-- Page Title Banner -->
             <div class="contact-banner position-relative">
-                <img src="images/contact/LILAC_STOREFRONT_TITLE_BANNER.jpg" alt="Contact Lilac's Cafeteria" class="contact-banner-img">
+                <img src="images/contact/lilac_storefront_title_banner.jpg" alt="Contact Lilac's Cafeteria" class="contact-banner-img">
                 <div class="contact-banner-overlay d-flex align-items-center justify-content-center">
                     <h1 class="contact-banner-title mb-0">Contact Us</h1>
                 </div>
             </div>
 
-            <!-- Contact Info & Message Form Section -->
             <div class="contact-section py-5">
                 <div class="container py-lg-3">
                     <div class="row align-items-start g-5">
-
-                        <!-- Left Column: Contact Information -->
                         <div class="col-12 col-lg-5">
                             <h2 class="contact-heading mb-4">Contact Information</h2>
-                            <ul class="list-unstyled contact-info-list mb-0">
-                                <li>
-                                    <i class="bi bi-telephone-fill"></i>
-                                    <span><b>0917 592 0609</b></span>
-                                </li>
-                                <li>
-                                    <i class="bi bi-clock-fill"></i>
-                                    <span><b>10:00 AM - 8:00 PM</b></span>
-                                </li>
-                                <li>
-                                    <i class="bi bi-geo-alt-fill"></i>
-                                    <span><b>35 A National Highway, Lower Kalaklan, Olongapo City, 2200 Zambales</b></span>
-                                </li>
-                            </ul>
+                            <div data-biz-details>
+                                <ul class="list-unstyled contact-info-list mb-3">
+                                    <li>
+                                        <i class="bi bi-telephone-fill"></i>
+                                        <span><b data-biz-phone>0917 592 0609</b></span>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-clock-fill"></i>
+                                        <span>
+                                            <b>Opening Hours:</b><br>
+                                            Mon: 8:30 AM – 8:30 PM<br>
+                                            Tue – Fri: 7:00 AM – 9:30 PM<br>
+                                            Sat – Sun: 8:00 AM – 9:30 PM
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                        <span><b data-biz-address>35 A Lower Kalaklan, Zambales (In Front of Celtech College), 2200, Olongapo</b></span>
+                                    </li>
+                                </ul>
+                                <a id="contactMapLink" href="https://www.google.com/maps/place/Lilacs+Cafeteria/@14.8362562,120.2755242,17z/data=!3m1!4b1!4m6!3m5!1s0x3396798974f049cb:0x8193fbf0f2c44569!8m2!3d14.836251!4d120.2781045!16s%2Fg%2F11p2dj89tc" target="_blank" rel="noopener noreferrer" class="btn btn-outline-lilac btn-sm">
+                                    <i class="bi bi-map me-1"></i> Open in Google Maps
+                                </a>
+                            </div>
+                            <div class="alert alert-warning d-none" data-biz-unavailable>
+                                Business contact details are currently unavailable.
+                            </div>
                         </div>
 
-                        <!-- Right Column: Send Us a Message Form -->
                         <div class="col-12 col-lg-7">
                             <h2 class="contact-heading text-center mb-4">Send Us a Message</h2>
                             <div class="contact-form-card">
@@ -116,12 +124,10 @@
                                 </form>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
 
-            <!-- Google Map Embed Section (Pinned to Lilacs Cafeteria) -->
             <div class="contact-map-section">
                 <div class="contact-map-wrapper">
                     <iframe
@@ -139,42 +145,43 @@
         <footer class="site-footer py-5">
             <div class="container">
                 <div class="row align-items-center gy-4">
-
                     <div class="col-12 col-md-3 text-center text-md-start">
                         <div class="footer-logo-wrapper">
-                            <img src="images/Lilac_Logo.jpg" alt="Lilac's Cafeteria Logo" class="footer-logo">
+                            <img src="images/lilac_logo.jpg" alt="Lilac's Cafeteria Logo" class="footer-logo">
                         </div>
                     </div>
 
                     <div class="col-12 col-md-5 text-white">
                         <h5 class="footer-heading mb-3">Contacts</h5>
-                        <ul class="list-unstyled footer-contact-list mb-0">
-                            <li>
-                                <i class="bi bi-telephone-fill"></i>
-                                <span>0917 592 0609</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-clock-fill"></i>
-                                <span>10:00 AM - 8:00 PM</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-geo-alt-fill"></i>
-                                <span>35 A National Highway, Lower Kalaklan, Olongapo City, 2200 Zambales</span>
-                            </li>
-                        </ul>
+                        <div data-biz-details>
+                            <ul class="list-unstyled footer-contact-list mb-0">
+                                <li>
+                                    <i class="bi bi-telephone-fill"></i>
+                                    <span data-biz-phone>0917 592 0609</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-clock-fill"></i>
+                                    <span>Mon 8:30 AM – 8:30 PM | Tue–Fri 7:00 AM – 9:30 PM | Sat–Sun 8:00 AM – 9:30 PM</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span data-biz-address>35 A Lower Kalaklan, Zambales (In Front of Celtech College), 2200, Olongapo</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="small mb-0 d-none" data-biz-unavailable>Business contact details are currently unavailable.</p>
                     </div>
 
                     <div class="col-12 col-md-4 text-white">
                         <h5 class="footer-heading mb-3">Quick Links</h5>
                         <div class="footer-quick-links">
                             <a href="index.html">Home</a>
-                            <a href="order.html">Order</a>
+                            <a href="menu.html">Order</a>
                             <a href="contact.html">Contact</a>
                             <a href="about.html">About</a>
                             <a href="gallery.html">Gallery</a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </footer>

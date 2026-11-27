@@ -149,4 +149,28 @@
     .contact-map-wrapper {
         height: 300px;
     }
+
+    .cart-panel-card {
+        position: static;
+    }
+
+    .confirm-banner-title {
+        font-size: 2.1rem;
+    }
+
+    .confirm-order-number {
+        font-size: 1.9rem;
+    }
+
+    .confirm-meta-value {
+        font-size: 1.25rem;
+    }
+
+    .checkout-card {
+        padding: 20px 18px;
+    }
+
+    .qrph-total-amount {
+        font-size: 1.65rem;
+    }
 }
